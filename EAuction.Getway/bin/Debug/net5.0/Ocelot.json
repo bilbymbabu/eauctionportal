@@ -1,0 +1,88 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{v}/buyer/place-bid",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eauctionbuyer20220630181558.azurewebsites.net",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/e-auction/api/v{v}/buyer/place-bid",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{v}/buyer/update-bid/{ProductId}/{buyerEmailId}/{newBidAmount}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eauctionbuyer20220630181558.azurewebsites.net",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/e-auction/api/v{v}/buyer/update-bid/{ProductId}/{buyerEmailId}/{newBidAmount}",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{v}/seller/addSeller",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eauctionseller20220630182418.azurewebsites.net",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/e-auction/api/v{v}/seller/addSeller",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{v}/seller/addproduct",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eauctionseller20220630182418.azurewebsites.net",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/e-auction/api/v{v}/seller/addproduct",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{v}/seller/show-bids/{productID}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eauctionseller20220630182418.azurewebsites.net",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/e-auction/api/v{v}/seller/show-bids/{productID}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{v}/seller/products",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eauctionseller20220630182418.azurewebsites.net",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/e-auction/api/v{v}/seller/products",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/e-auction/api/v{v}/seller/delete/{productID}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eauctionseller20220630182418.azurewebsites.net",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/e-auction/api/v{v}/seller/delete/{productID}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    }
+  ]
+}  

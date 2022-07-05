@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<div class="container" style="width:60%">
+    <div class="text-center mt-3">
+        <h3 style="color:rgb(14, 14, 34)">Fetch Bid Details</h3>
+    </div>
+    <div class="ddlProduct text-center">
+        Product: &nbsp;&nbsp;
+            <select placeholder="Select product" [(ngModel)]="selectedProductId" >
+                <option *ngFor="let product of productInfo" [ngValue]="product.productId">{{product.productName}}
+                </option>
+            </select>
+        
+        &nbsp;
+        <button [disabled]="!selectedProductId"  class="btn btn-primary" (click)="getBidDeatils()">GET</button>
+    </div>
+    <br />
+    <div *ngIf="bidInfo">
+        <div class="row">
+            <div class="col-6 text-end">Product Name :</div>
+            <div class="col-6 text-start">{{bidInfo.productName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-end">Short Description :</div>
+            <div class="col-6 text-start">{{bidInfo.shortDescription}}</div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-end">Detailed Description :</div>
+            <div class="col-6 text-start">{{bidInfo.detailedDeceription}}</div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-end">Category :</div>
+            <div class="col-6 text-start">{{bidInfo.category}}</div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-end">Starting Price :</div>
+            <div class="col-6 text-start">{{bidInfo.startingPrice}}</div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-end">Bid End Date :</div>
+            <div class="col-6 text-start">{{bidInfo.bidEndDate}}</div>
+        </div>
+
+        <br />
+        <div *ngIf="bidInfo.bidDetails" class="text-center mt-3">
+            <h3 style="color:rgb(1, 1, 22)">Bids</h3>
+        </div>
+        <div *ngIf="bidInfo.bidDetails" class="container">           
+            <table class="table table-striped">
+              <thead>
+                  <tr>
+                    <th>Bid Amount</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let bid of bidInfo.bidDetails">
+                  <td>{{bid.bidAmount}}</td>
+                  <td>{{bid.buyerName}}</td>
+                  <td>{{bid.emailId}}</td>
+                  <td>{{bid.phone}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>       
+    </div>
+</div>

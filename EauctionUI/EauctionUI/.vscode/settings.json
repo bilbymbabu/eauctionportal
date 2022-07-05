@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/9684f1ae-1a49-4c96-9ece-74a0adb6bba3/resourceGroups/e-auctionresource/providers/Microsoft.Web/sites/eauctionapp",
+    "appService.deploySubpath": "dist\\EauctionUI"
+}

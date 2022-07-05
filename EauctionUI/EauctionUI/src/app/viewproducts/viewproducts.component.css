@@ -1,0 +1,13 @@
+.bg-img
+{
+    /* background-color: #b3fff0; */
+    /* background: url('https://i.imgur.com/R4YKb5d.jpeg'); */
+    background: #d6d6f5;
+    min-height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.btn-grad {background-image: linear-gradient(to right, #0205a3 0%, rgb(88, 2, 128) 51%, #21023a 100%)}
+.btn-grad:hover { background-position: right center; }

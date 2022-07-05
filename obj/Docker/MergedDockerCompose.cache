@@ -1,0 +1,36 @@
+services:
+  eauction.getway:
+    build:
+      context: C:\Users\cogdotnet148\source\repos\eacutionsystem
+      dockerfile: EAuction.Getway/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: eauctiongetway
+    ports:
+    - target: 80
+  eauctionbuyer:
+    build:
+      context: C:\Users\cogdotnet148\source\repos\eacutionsystem
+      dockerfile: EAuctionBuyer/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: eauctionbuyer
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\cogdotnet148\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\cogdotnet148\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  eauctionseller:
+    build:
+      context: C:\Users\cogdotnet148\source\repos\eacutionsystem
+      dockerfile: EAuctionSeller/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: eauctionseller
+    ports:
+    - target: 80
+    volumes:
+    - C:\Users\cogdotnet148\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

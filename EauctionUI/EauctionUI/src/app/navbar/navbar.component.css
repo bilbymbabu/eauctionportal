@@ -1,0 +1,63 @@
+.navbar
+{
+    background-color:#0f0f11;
+}
+.navbar-toggler
+{   
+    color: #0a0a11;
+}
+.navbar-brand,.nav-link
+{
+    color:white;
+    font-weight: bolder;
+}
+footer
+{
+    background-color:#ff8c1a;
+    color:white;
+    height: 35px;
+}
+.bg-img
+{
+    background-color: #a4c1c1;
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/* .bg-img{
+    background-image: url("src\assets\dashboard.jpg");
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+} */
+
+  .searchbar {
+    float: right;
+  }
+  
+  .searchbar .searchbartext {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    font-size: 17px;
+  }
+  .searchbar button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .searchbar button:hover {
+    background: #ccc;
+  }
+  
